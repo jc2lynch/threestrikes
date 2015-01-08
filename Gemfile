@@ -4,6 +4,12 @@ gem 'mongoid', '~> 4.0.0'
 
 # I have added the gem of Mongoid
 
+gem 'carrierwave'
+gem 'carrierwave-mongoid', :require => 'carrierwave/mongoid'
+
+gem 'fog' # for Amazon S3
+gem 'mini_magick' # for post-upload image processing
+
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.1.7'

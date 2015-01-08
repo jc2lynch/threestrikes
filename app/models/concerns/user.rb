@@ -4,12 +4,11 @@ class User
   field :email, type: String
   field :favorite_team, type: String
 
-  mount_uploader :image, AvatarUploader
-
   has_many :picks
   has_and_belongs_to_many :leagues 
 
-
+    mount_uploader :image, AvatarUploader
+ 
 
 
 end
