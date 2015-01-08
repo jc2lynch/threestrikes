@@ -1,1 +1,16 @@
-<h1>New User</h1>
+<div id="user-form">
+	<%= form_for(@user, :html => {:multipart => true}) do |f| %>
+		<%= f.text_field :email, placeholder: "email" %> <%= @user.errors.messages[:email].join(", ") %><br>
+		
+
+		<%= f.text_field :favorite_team, placeholder: "Who do you root for?" %><br>
+		<%= f.number_field :name, placeholder: "Name" %><br><br>
+
+		<%= f.file_field :image %>
+		
+
+		<%= f.submit "Create new user!" %>
+	<% end %>
+</div>
+
+<%= debug(params) %>
