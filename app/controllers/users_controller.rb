@@ -9,11 +9,12 @@ class UsersController < ApplicationController
 	
 	def create
 		@user = User.new(
-			params.require(:user).permit(:name, :email, :favorite_team, :password, :image))
+			params.require(:user).permit(:name, :email, :favorite_team, :password, :password_confirmation, :image))
 		if @user.save
-  			redirect_to root_path
+			session[:user_id] = @user.id.to_s
+			redirect_to root_path
 		else
-  			render 'new'
+  			render :new
   		end
 	end
 

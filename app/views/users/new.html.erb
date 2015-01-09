@@ -1,12 +1,19 @@
+<h1>Sign up for an account</h1>
+
+<ul>
+    <% @user.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+    <% end %>
+    </ul>
+
 <div id="user-form">
 	<%= form_for(@user, :html => {:multipart => true}) do |f| %>
-		<%= f.text_field :email, placeholder: "email" %> <%= @user.errors.messages[:email].join(", ") %><br>
-		
-
-		<%= f.text_field :favorite_team, placeholder: "Who do you root for?" %><br>
-		<%= f.number_field :name, placeholder: "Name" %><br><br>
-
-		<%= f.file_field :image %>
+	<%= f.text_field :name, placeholder: "Name" %><br><br>
+	<%= f.text_field :favorite_team, placeholder: "Who do you root for?" %><br>
+	<%= f.text_field :email, placeholder: "email" %> <%= @user.errors.messages[:email].join(", ") %><br>
+	<%= f.password_field :password, placeholder: "Password" %><br><br>
+	<%= f.password_field :password_confirmation, placeholder: "Confirm Password" %><br><br>
+	<%= f.file_field :image, placeholder: "Mugshot" %>
 		
 
 		<%= f.submit "Create new user!" %>
