@@ -1,22 +1,22 @@
 Rails.application.routes.draw do
 
-  get 'posts/index'
+  # get 'posts/index'
 
-  get 'posts/new'
+  # get 'posts/new'
 
-  get 'posts/edit'
+  # get 'posts/edit'
 
-  get 'posts/show'
+  # get 'posts/show'
 
-  root "users#new"
-  get '/signup' => 'users#new'
-  post '/signup' =>'users#create'
+   root "users#new"
+  # get '/signup' => 'users#new'
+  # post '/signup' =>'users#create'
   
-  get '/login' => 'sessions#new'
-  post '/login' => 'sessions#create'
-  delete '/login' => 'users#delete'
+  # get '/login' => 'sessions#new'
+  # post '/login' => 'sessions#create'
+  # delete '/login' => 'users#delete'
 
-
+resources :posts
 resources :users  
 resources :picks
 resources :leagues

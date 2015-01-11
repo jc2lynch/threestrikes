@@ -3,6 +3,10 @@ class PostsController < ApplicationController
   	@post = Post.all
   end
 
+  def show
+  
+  end
+
   def new
 
   	@post = Post.new
@@ -20,6 +24,9 @@ class PostsController < ApplicationController
   	
   end
 
-  def show
+  def destroy
+    
   end
+
+ 
 end
