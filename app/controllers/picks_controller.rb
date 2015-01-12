@@ -26,3 +26,6 @@ class PicksController < ApplicationController
 		
 	end
 end
+
+# picks is going to be a drop down,
+# do i still need all of the these methods?

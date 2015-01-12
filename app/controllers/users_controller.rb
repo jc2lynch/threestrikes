@@ -12,7 +12,7 @@ class UsersController < ApplicationController
 			params.require(:user).permit(:name, :email, :favorite_team, :password, :password_confirmation, :image))
 		if @user.save
 			session[:user_id] = @user.id.to_s
-			redirect_to root_path
+			redirect_to user_path@user
 		else
   			render :new
   		end
