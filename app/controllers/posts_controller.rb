@@ -1,15 +1,19 @@
 class PostsController < ApplicationController
+# this will show the entire conversation of all of the users in the league
   def index
-  	@post = Post.all
+  	@posts = Post.all
+  
   end
+# show will show one post 
 
   def show
+    @post = Post.find(params[:id])
   
   end
 
   def new
-
-  	@post = Post.new
+    @post = Post.new
+  
   end
 
   def create

@@ -1,20 +1,10 @@
 Rails.application.routes.draw do
 
-  # get 'posts/index'
+ 
 
-  # get 'posts/new'
 
-  # get 'posts/edit'
 
-  # get 'posts/show'
-
-   root "users#new"
-  # get '/signup' => 'users#new'
-  # post '/signup' =>'users#create'
-  
-  # get '/login' => 'sessions#new'
-  # post '/login' => 'sessions#create'
-  # delete '/login' => 'users#delete'
+root "static_pages#home"
 
 resources :posts
 resources :users  
