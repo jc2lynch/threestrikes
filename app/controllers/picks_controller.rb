@@ -16,16 +16,8 @@ class PicksController < ApplicationController
 	def create
 		
 	end
-	def edit
-		
-	end
-	def update	
-	end
-
-	def destroy
-		
-	end
+	
 end
 
-# picks is going to be a drop down,
-# do i still need all of the these methods?
+# make sure that this has a timestamp and that the timestamp says that this happened before the start of the game
+

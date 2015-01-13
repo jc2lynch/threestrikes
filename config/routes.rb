@@ -10,6 +10,11 @@ resources :posts
 resources :users  
 resources :picks
 resources :leagues, except:[:edit, :update, :destroy]
+ 
+ get "/signup" => "users#new"
+ get "/login" => "sessions#new"
+ post "/login" => "sessions#create"
+ delete "/logout" => "sessions#destroy"
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".

@@ -1,1 +1,8 @@
-<h1>THis is the </h1>
+<h1>Edit your Profile</h1>
+<%= @user.errors.full_messages %>
+<%= form_for @user do |f| %>
+	Name: <%= f.text_field :name %>
+	Email: <%= f.text_field :email %>
+	Favorite_team: <%= f.text_field :favorite_team %>
+	<%= f.submit "save changes!" %>
+<% end %>
