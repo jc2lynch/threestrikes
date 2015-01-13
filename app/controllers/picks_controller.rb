@@ -14,11 +14,10 @@ class PicksController < ApplicationController
 		@pick = Pick.new
 	end
 	def create
-	 @pick = Pick.new(params.require(:week, :team_name))
-
+	 @pick = Pick.new(params.require(:user)
+	 	.permit(:week, :team_name))
 	 if @pick.save
-	 	redirect_to user_path
-	 else render "new"
+	 	redirect_to user_path @user
 	 end
 		
 	end
