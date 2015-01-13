@@ -8,7 +8,7 @@ root "static_pages#home"
 
 resources :posts
 resources :users  
-resources :picks
+resources :picks, except:[:edit, :update, :destroy]
 resources :leagues, except:[:edit, :update, :destroy]
  
  get "/signup" => "users#new"

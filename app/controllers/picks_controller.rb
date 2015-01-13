@@ -5,7 +5,7 @@ class PicksController < ApplicationController
 	end
 
 	def show
-		@pick = Pick.show
+		@pick = Pick.find(:id => params[:id])
 		
 	end
 
@@ -14,6 +14,12 @@ class PicksController < ApplicationController
 		@pick = Pick.new
 	end
 	def create
+	 @pick = Pick.new(params.require(:week, :team_name))
+
+	 if @pick.save
+	 	redirect_to user_path
+	 else render "new"
+	 end
 		
 	end
 	

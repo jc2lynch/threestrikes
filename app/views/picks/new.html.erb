@@ -1,1 +1,13 @@
 <!-- this is where the users will make their picks it will be a form -->
+<h1>individual Users will be able to make their picks</h1>
+<p>week 1</p>
+
+<%= form_for @pick do |f| %>
+  <%= f.select :week, (1..17).map{|n| [n,n]} %>
+  <%= f.select :team_name, [['Seahawks','seahawks'],['Packers','packers'],['Patriots','patriots'],['Colts','colts']] %>
+  <%= f.submit %>
+
+<% end %>
+		
+
+

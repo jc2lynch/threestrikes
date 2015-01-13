@@ -33,12 +33,14 @@ class UsersController < ApplicationController
 
     end
 	
+	
 	def destroy
-		def destroy
       @user = User.find(params[:id])
-      @user.destroy
-      redirect_to "static_pages#home"
-    end
+      if @user.destroy
+      	session.delete(:user_id)
+      redirect_to root_path
+  	else
+      end
 	end
 
 
