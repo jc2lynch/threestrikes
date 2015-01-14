@@ -8,9 +8,9 @@
 </head>
 <body>
 <% if current_user %>
-<p> hello </p><%=  current_user.name %>
+
 	
-		<%= link_to "Home", users_path %>
+		<%= link_to "Home", user_path(current_user) %>
 		<%= link_to "Make Pick", new_pick_path  %>
 		<%= link_to "Previous Picks", picks_path  %>
 		<%= link_to "Talk Trash", new_post_path  %>
@@ -18,7 +18,7 @@
 		<%= link_to "league picks", leagues_path  %>
 		<%= link_to "log out", logout_path, method: :delete %>
 <% end %>
-	
+<!--  -->
 
 
 <%= yield %>

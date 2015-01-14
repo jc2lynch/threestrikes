@@ -1,9 +1,6 @@
 Rails.application.routes.draw do
 
  
-
-
-
 root "static_pages#home"
 
 resources :posts, except:[:edit, :update, :destroy]

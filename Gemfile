@@ -10,7 +10,7 @@ gem 'carrierwave-mongoid', :require => 'carrierwave/mongoid'
 gem 'fog' # for Amazon S3
 gem 'mini_magick' # for post-upload image processing
 
-
+gem 'better_errors', '~> 2.0.0'
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.1.7'
 # Use SCSS for stylesheets

@@ -2,12 +2,15 @@
 <ul>
 	<% @picks.each do |pick| %>	
 	<li>
-		<%= pick.week %>
+		<%= pick.week %> <%= pick.team_name%> <%= pick.user.name %>
 	</li>
 	<% end %>
+	<%= @picks.all %>
 
 
 </ul>
+
+<%= current_user.picks.all %>
 
 
 
