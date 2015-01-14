@@ -7,7 +7,8 @@
   <%= csrf_meta_tags %>
 </head>
 <body>
-
+<% if current_user %>
+<p> hello </p><%=  current_user.name %>
 	
 		<%= link_to "Home", users_path %>
 		<%= link_to "Make Pick", new_pick_path  %>
@@ -15,7 +16,8 @@
 		<%= link_to "Talk Trash", new_post_path  %>
 		<%= link_to "Chat Room", posts_path %>
 		<%= link_to "league picks", leagues_path  %>
-		<%= link_to "log out", logout_path %>
+		<%= link_to "log out", logout_path, method: :delete %>
+<% end %>
 	
 
 
