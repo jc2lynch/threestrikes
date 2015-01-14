@@ -6,7 +6,7 @@ Rails.application.routes.draw do
 
 root "static_pages#home"
 
-resources :posts
+resources :posts, except:[:edit, :update, :destroy]
 resources :users  
 resources :picks, except:[:edit, :update, :destroy]
 resources :leagues, except:[:edit, :update, :destroy]

@@ -17,28 +17,25 @@ class PostsController < ApplicationController
   end
 
   def create
-  	@post = Post.new(params.require(:name))
+  	@post = Post.create(post_params)
 
     if @post.save
-      flash.alert = "trash successfully talked"
+
       redirect_to posts_path
-    else flash.alert = "oops, that didnt work"
+    else 
       render "new"
     end
   	
   end
 
-  def edit
-    @post = post.find(params[:id])
-  end
+private
 
-  def update
-  	
-  end
+def post_params
+  params.require(:post).permit(:tilte, :body)
+  
+end
 
-  def destroy
-    
-  end
+ 
 
  
 end
